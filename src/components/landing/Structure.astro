@@ -5,22 +5,42 @@
   <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:grid-rows-3 lg:h-[90vh] max-w-7xl mx-auto w-full">
     
     <!-- 1. Bienvenido (C1, R1-2) -->
-    <div class="lg:col-span-1 lg:row-span-2 ring-1 dark:ring-white/10 ring-primary/5 bg-white dark:bg-secondary shadow-xl rounded-3xl p-8 flex flex-col justify-center">
-      <div class="flex items-center gap-x-4">
-        <div class="h-12 w-12 rounded-full bg-indigo-500 flex items-center justify-center text-white font-bold shadow-md">AB</div>
-        <div class="text-sm">
-          <p class="font-bold dark:text-white text-primary">Antonio Barrón</p>
-          <p class="text-zinc-500 dark:text-zinc-400">Full Stack Developer</p>
+    <div class="lg:row-span-2 lg:col-span-1 ring-1 dark:ring-white/10 ring-primary/5 bg-white dark:bg-secondary shadow-xl rounded-3xl p-8 flex flex-col justify-between group overflow-hidden relative">
+      <div class="relative z-10">
+        <div class="flex items-center gap-x-4 mb-6">
+          <div class="h-16 w-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-2xl border-2 border-white/10 shadow-inner">
+            AB
+          </div>
+          <div class="text-sm">
+            <p class="font-bold text-lg dark:text-white tracking-tight">Antonio Barrón</p>
+            <p class="text-indigo-400 font-medium text-[10px] tracking-[0.15em] uppercase">Fullstack Background</p>
+          </div>
+        </div>
+
+        <h1 class="text-4xl font-bold lg:text-5xl tracking-tighter dark:text-white mb-6">
+          Frontend <span class="text-indigo-500">Developer</span>
+        </h1>
+
+        <div class="space-y-4 text-zinc-500 dark:text-zinc-400 font-normal leading-relaxed text-sm text-justify">
+          <p>
+            Transformo ideas complejas en <strong class="dark:text-white font-semibold">interfaces funcionales y escalables</strong>. 
+          </p>
+          <p>
+            Mi enfoque principal es el ecosistema de <strong class="dark:text-white font-semibold">React</strong>, donde busco el equilibrio perfecto entre una arquitectura de código limpia y una experiencia de usuario fluida.
+          </p>
         </div>
       </div>
-      <h1 class="text-3xl mt-6 font-bold lg:text-4xl tracking-tighter dark:text-white text-primary">¡Bienvenido!</h1>
-      <p class="mt-4 text-sm text-zinc-500 dark:text-zinc-400 font-light leading-relaxed">
-        Desarrollador enfocado en Frontend, especializado en React y código limpio.
-      </p>
+
+      <div class="mt-8 pt-6 border-t border-zinc-200 dark:border-white/10 relative z-10">
+        <a href="#projects-section" class="inline-flex items-center gap-2 text-xs font-semibold py-3 px-6 rounded-full bg-primary dark:bg-white text-white dark:text-primary transition-all hover:scale-105">
+          Ver mis proyectos
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
 
     <!-- 2. Proyectos Destacados (C2-3, R1) -->
-    <div class="lg:col-span-2 lg:row-span-1 ring-1 dark:ring-white/10 ring-primary/5 rounded-3xl p-8 bg-white dark:bg-secondary shadow-xl flex flex-col justify-between">
+    <div id="projects-section" class="lg:col-span-2 lg:row-span-1 ring-1 dark:ring-white/10 ring-primary/5 rounded-3xl p-8 bg-white dark:bg-secondary shadow-xl flex flex-col justify-between">
       <div class="flex items-center justify-between mb-2">
         <p class="text-xl font-bold dark:text-white text-primary leading-tight font-serif italic">Proyectos destacados</p>
         <a href="https://github.com/barockatr?tab=repositories" target="_blank" class="text-xs text-blue-500 hover:text-blue-600 transition-colors">Ver todos →</a>
@@ -54,14 +74,25 @@
     </div>
 
     <!-- 3. Conéctate (C4, R1) -->
-    <div class="lg:col-span-1 lg:row-span-1 ring-1 dark:ring-white/10 ring-primary/5 rounded-3xl p-6 bg-white dark:bg-secondary shadow-xl flex flex-col justify-between">
-      <p class="text-lg font-bold dark:text-white text-primary">Conéctate</p>
-      <div class="flex gap-4 flex-wrap items-center justify-center mt-2">
-        <!-- Social Icons remain the same -->
-        <a href="mailto:antonioatristain06@gmail.com" class="text-primary dark:text-white hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"/><path d="M3 7l9 6l9 -6"/></svg></a>
-        <a href="https://github.com/barockatr" target="_blank" class="text-primary dark:text-white hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg></a>
-        <a href="https://www.linkedin.com/in/antonio-barr%C3%B3n-atristain-8b74b3283/" target="_blank" class="text-primary dark:text-white hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg></a>
-        <a href="https://wa.me/527223680858" target="_blank" class="text-primary dark:text-white hover:scale-110 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg></a>
+    <div class="lg:col-span-1 lg:row-span-1 ring-1 dark:ring-white/10 ring-primary/5 rounded-3xl p-8 bg-white dark:bg-secondary shadow-xl flex flex-col items-center justify-between group">
+      <p class="text-xl font-bold dark:text-white tracking-tight mb-4">Conéctate</p>
+
+      <div class="flex items-center justify-around w-full mt-4 flex-1">
+        <a href="mailto:antonioatristain06@gmail.com" class="text-zinc-500 dark:text-zinc-400 hover:text-indigo-500 dark:hover:text-indigo-400 transition-all duration-300 hover:scale-125">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+
+        <a href="https://github.com/barockatr" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-white transition-all duration-300 hover:scale-125">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/antoniobarron/" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-blue-500 transition-all duration-300 hover:scale-125">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+
+        <a href="https://wa.me/527223680858" target="_blank" class="text-zinc-500 dark:text-zinc-400 hover:text-green-500 transition-all duration-300 hover:scale-125">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-10.6 8.38 8.38 0 0 1 3.8.9L22 2l-1.5 6.5Z"/></svg>
+        </a>
       </div>
     </div>
 
@@ -79,41 +110,70 @@
 
     <!-- 5. Frase (C4, R2) -->
     <div class="lg:col-span-1 lg:row-span-1 ring-1 dark:ring-white/10 ring-primary/5 rounded-3xl p-6 bg-white dark:bg-secondary shadow-xl flex items-center justify-center text-center">
-      <p class="text-[10px] italic text-zinc-500 dark:text-zinc-400 leading-tight">"El código es poesía en movimiento."</p>
+      <p id="bento-quote" class="text-[11px] italic text-zinc-500 dark:text-zinc-400 transition-opacity duration-500 opacity-100">
+        "El código es poesía en movimiento."
+      </p>
     </div>
 
-    <!-- 6. Tech Stack & Herramientas (C1-2, R3) -->
-    <div class="lg:col-span-2 lg:row-span-1 ring-1 dark:ring-white/10 ring-primary/5 rounded-3xl p-6 bg-white dark:bg-secondary shadow-xl">
-      <p class="text-sm font-bold dark:text-white text-primary mb-4 italic">Tech Stack & Herramientas</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-[10px] font-medium bg-blue-500/10 text-blue-500 ring-1 ring-inset ring-blue-500/20">
-          <img src="https://cdn.simpleicons.org/react/61DAFB" class="h-3 w-3" alt="React" /> React
+    <!-- 6. Tech Stack (C1, R3) -->
+    <div class="lg:col-span-1 lg:row-span-1 ring-1 dark:ring-white/10 ring-primary/5 rounded-3xl p-5 bg-white dark:bg-secondary shadow-xl flex flex-col items-center group overflow-hidden relative">
+      <p class="text-sm font-bold dark:text-white text-primary mb-3 flex items-center gap-2 relative z-10">
+        <span class="text-indigo-500 font-mono transition-transform group-hover:rotate-12 duration-300">&lt;/&gt;</span> Tech Stack
+      </p>
+      
+      <div class="flex flex-wrap justify-center gap-2 w-full relative z-10 flex-1 content-center">
+        <span class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl text-[10px] font-medium bg-cyan-950/20 text-cyan-300 ring-1 ring-cyan-500/30 transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)]">
+          <img src="https://cdn.simpleicons.org/react/61DAFB" class="h-3.5 w-3.5" alt="React" /> React
         </span>
-        <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-[10px] font-medium bg-zinc-500/10 text-zinc-600 dark:text-zinc-300 ring-1 ring-inset ring-zinc-500/20 dark:ring-white/10">
-          <img src="https://cdn.simpleicons.org/nextdotjs/white" class="h-3 w-3 dark:block hidden" />
-          <img src="https://cdn.simpleicons.org/nextdotjs/black" class="h-3 w-3 dark:hidden block" /> Next.js
+
+        <span class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl text-[10px] font-medium bg-yellow-950/20 text-yellow-300 ring-1 ring-yellow-400/30 transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(250,204,21,0.3)]">
+          <img src="https://cdn.simpleicons.org/javascript/F7DF1E" class="h-3.5 w-3.5" alt="JS" /> JS (ES6+)
         </span>
-        <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-[10px] font-medium bg-blue-600/10 text-blue-400 ring-1 ring-inset ring-blue-600/20">
-          <img src="https://cdn.simpleicons.org/typescript/3178C6" class="h-3 w-3" /> TS
+
+        <span class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl text-[10px] font-medium bg-sky-950/20 text-sky-300 ring-1 ring-sky-500/30 transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(56,189,248,0.3)]">
+          <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" class="h-3.5 w-3.5" alt="Tailwind" /> Tailwind
         </span>
-        <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-[10px] font-medium bg-green-500/10 text-green-500 ring-1 ring-inset ring-green-500/20">
-          <img src="https://cdn.simpleicons.org/nodedotjs/339933" class="h-3 w-3" /> Node.js
+
+        <span class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl text-[10px] font-medium bg-blue-950/20 text-blue-300 ring-1 ring-blue-500/30 transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+          <img src="https://img.icons8.com/color/48/css3.png" class="h-3.5 w-3.5" alt="CSS3" /> CSS3
         </span>
-        <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-[10px] font-medium bg-sky-500/10 text-sky-400 ring-1 ring-inset ring-sky-500/20">
-          <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" class="h-3 w-3" /> Tailwind
+
+        <span class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl text-[10px] font-medium bg-zinc-800/20 text-zinc-100 ring-1 ring-zinc-500/30 transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+          <img src="https://cdn.simpleicons.org/nextdotjs/white" class="h-3.5 w-3.5" alt="Next.js" /> Next.js
+        </span>
+        
+        <span class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl text-[10px] font-medium bg-green-950/20 text-green-300 ring-1 ring-green-500/30 transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)]">
+          <img src="https://cdn.simpleicons.org/nodedotjs/339933" class="h-3.5 w-3.5" alt="Node.js" /> Node.js
         </span>
       </div>
     </div>
 
-    <!-- 7. Accede a mi trayectoria laboral completa (C3-4, R3) -->
-    <div class="lg:col-span-2 lg:row-span-1 bg-zinc-100 dark:bg-white rounded-3xl p-6 flex items-center justify-between shadow-xl ring-1 ring-primary/5 dark:ring-white/10">
-      <p class="text-black font-bold text-sm lg:text-base">Accede a mi trayectoria laboral completa</p>
-      <a href="https://drive.google.com/file/d/18C_Rn6OQfgOqlbWGXwXzeK5FnKn0V6p0/view?usp=sharing" target="_blank" class="bg-black text-white px-6 py-3 rounded-full text-xs font-bold hover:bg-zinc-800 transition-colors uppercase tracking-wider">VER CV</a>
+    <!-- 7. Accede a mi trayectoria laboral completa (C2-4, R3) -->
+    <div class="lg:col-span-3 lg:row-span-1 ring-1 dark:ring-white/10 ring-primary/5 rounded-3xl p-8 bg-gradient-to-r from-zinc-900 to-secondary dark:from-zinc-900 dark:to-tertiary shadow-2xl flex flex-col md:flex-row items-center justify-between overflow-hidden relative group">
+      
+      <div class="absolute -inset-y-24 -left-20 w-48 bg-indigo-500/10 blur-[100px] group-hover:bg-indigo-500/20 transition-colors duration-500"></div>
+
+      <div class="relative z-10 text-center md:text-left">
+        <h3 class="text-xl font-bold text-white tracking-tight mb-2">
+          ¿Quieres conocer más de mi experiencia?
+        </h3>
+        <p class="text-zinc-400 text-sm max-w-md">
+          Accede a mi trayectoria laboral completa y visualiza mi CV detallado en formato profesional.
+        </p>
+      </div>
+
+      <div class="relative z-10 mt-6 md:mt-0">
+        <a href="https://drive.google.com/file/d/18C_Rn6OQfgOqlbWGXwXzeK5FnKn0V6p0/view?usp=sharing" target="_blank" class="animate-shimmer relative overflow-hidden inline-flex items-center gap-3 px-8 py-4 bg-white text-primary font-bold rounded-2xl hover:scale-105 transition-all shadow-lg hover:shadow-indigo-500/20 active:scale-95">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          VISUALIZAR CV
+        </a>
+      </div>
     </div>
 
   </div>
 
   <script>
+    // Lógica de WhatsApp
     const whatsappBtn = document.getElementById('send-whatsapp-quick') as HTMLButtonElement | null;
     whatsappBtn?.addEventListener('click', () => {
       const name = (document.getElementById('contact-name-quick') as HTMLInputElement | null)?.value.trim();
@@ -121,5 +181,62 @@
       const text = `Hola Antonio, soy ${name}. Te contacto desde tu portafolio para platicar sobre un proyecto.`;
       window.open(`https://wa.me/527223680858?text=${encodeURIComponent(text)}`, '_blank');
     });
+
+    // Lógica de Rotación de Citas (Active Viewing)
+    const quotes = [
+        "\"El código es poesía en movimiento.\"",
+        "\"La simplicidad es la máxima sofisticación.\" — Leonardo da Vinci",
+        "\"No me importa si funciona en tu máquina, ¡no estamos vendiendo tu máquina!\"",
+        "\"Primero resuelve el problema. Entonces, escribe el código.\" — John Johnson",
+        "\"La función de un buen software es hacer que lo complejo parezca simple.\"",
+        "\"Hazlo simple, hazlo memorable.\"",
+        "\"El mejor código es el que no existe.\""
+    ];
+
+    const quoteElement = document.getElementById('bento-quote');
+    let lastIndex = 0;
+
+    function changeQuote() {
+        if (!quoteElement) return;
+        quoteElement.style.opacity = "0";
+
+        setTimeout(() => {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * quotes.length);
+            } while (randomIndex === lastIndex);
+            
+            lastIndex = randomIndex;
+            quoteElement.textContent = quotes[randomIndex];
+            quoteElement.style.opacity = "1";
+        }, 500);
+    }
+
+    if (quoteElement) {
+      setInterval(changeQuote, 6000);
+    }
   </script>
+
+  <style>
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .animate-shimmer::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+      );
+      animation: shimmer 2.5s infinite;
+    }
+  </style>
 </section>
