@@ -2,12 +2,12 @@
 ---
 
 <section class="p-4 bg-zinc-50 dark:bg-black min-h-screen flex items-center justify-center">
-  <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:grid-rows-3 lg:h-[90vh] max-w-7xl mx-auto w-full">
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:grid-rows-3 lg:h-[90vh] max-w-7xl mx-auto w-full bento-grid-root">
     
     <!-- 1. Bienvenido (C1, R1-2) -->
     <div class="lg:row-span-2 lg:col-span-1 ring-1 dark:ring-white/10 ring-primary/5 bg-white dark:bg-secondary shadow-xl rounded-3xl p-8 flex flex-col justify-between group overflow-hidden relative">
       <div class="relative z-10">
-        <div class="flex items-center gap-x-4 mb-6">
+        <div class="flex items-center gap-x-4 mb-4">
           <div class="h-16 w-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-2xl border-2 border-white/10 shadow-inner">
             AB
           </div>
@@ -17,21 +17,26 @@
           </div>
         </div>
 
-        <h1 class="text-4xl font-bold lg:text-5xl tracking-tighter dark:text-white mb-6">
-          Frontend <span class="text-indigo-500">Developer</span>
+        <h1 class="text-3xl font-bold lg:text-4xl tracking-tighter dark:text-white mb-3">
+          Software <span class="text-indigo-500">Developer</span>
         </h1>
 
-        <div class="space-y-4 text-zinc-500 dark:text-zinc-400 font-normal leading-relaxed text-sm text-justify">
+        <!-- Opción C: badge "Web & Mobile Specialist" -->
+        <div class="flex items-center gap-2 mb-4">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-semibold tracking-wider uppercase bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 text-indigo-300 ring-1 ring-indigo-400/30">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+            Web &amp; Mobile Specialist
+          </span>
+        </div>
+
+        <div class="text-zinc-500 dark:text-zinc-400 font-normal leading-relaxed text-sm text-justify">
           <p>
-            Transformo ideas complejas en <strong class="dark:text-white font-semibold">interfaces funcionales y escalables</strong>. 
-          </p>
-          <p>
-            Mi enfoque principal es el ecosistema de <strong class="dark:text-white font-semibold">React</strong>, donde busco el equilibrio perfecto entre una arquitectura de código limpia y una experiencia de usuario fluida.
+            Transformo ideas complejas en <strong class="dark:text-white font-semibold">interfaces multiplataforma</strong> funcionales y escalables. Mi stack principal es <strong class="dark:text-white font-semibold">React</strong>, con foco en arquitectura limpia, soluciones <strong class="dark:text-white font-semibold">móviles nativas (Android)</strong> y UX fluida.
           </p>
         </div>
       </div>
 
-      <div class="mt-8 pt-6 border-t border-zinc-200 dark:border-white/10 relative z-10">
+      <div class="mt-3 pt-3 border-t border-zinc-200 dark:border-white/10 relative z-10">
         <a href="#projects-section" class="inline-flex items-center gap-2 text-xs font-semibold py-3 px-6 rounded-full bg-primary dark:bg-white text-white dark:text-primary transition-all hover:scale-105">
           Ver mis proyectos
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
@@ -40,36 +45,44 @@
     </div>
 
     <!-- 2. Proyectos Destacados (C2-3, R1) -->
-    <div id="projects-section" class="lg:col-span-2 lg:row-span-1 ring-1 dark:ring-white/10 ring-primary/5 rounded-3xl p-8 bg-white dark:bg-secondary shadow-xl flex flex-col justify-between">
+    <div id="projects-section" class="lg:col-span-2 lg:row-span-1 ring-1 dark:ring-white/10 ring-primary/5 rounded-3xl pt-5 px-5 pb-3 bg-white dark:bg-secondary shadow-xl flex flex-col overflow-hidden">
       <div class="flex items-center justify-between mb-2">
         <p class="text-xl font-bold dark:text-white text-primary leading-tight font-serif italic">Proyectos destacados</p>
         <a href="https://github.com/barockatr?tab=repositories" target="_blank" class="text-xs text-blue-500 hover:text-blue-600 transition-colors">Ver todos →</a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div class="grid grid-cols-3 gap-3 flex-1">
         <!-- Rick & Morty App -->
-        <a href="https://rick-morty-character-hy17s2mni.vercel.app" target="_blank" class="rounded-xl overflow-hidden bg-zinc-50 dark:bg-tertiary ring-1 ring-primary/5 dark:ring-white/5 hover:scale-[1.02] transition-transform duration-300 group">
-           <img src="/images/rick-morty.png" alt="Rick & Morty" class="w-full aspect-video object-cover opacity-90 group-hover:opacity-100" />
-           <div class="p-2">
+        <a href="https://rick-morty-character-hy17s2mni.vercel.app" target="_blank" class="rounded-xl overflow-hidden bg-zinc-50 dark:bg-tertiary ring-1 ring-primary/5 dark:ring-white/5 hover:scale-[1.02] hover:ring-2 hover:ring-indigo-400/50 transition-all duration-300 group flex flex-col">
+           <img src="/images/rick-morty.png" alt="Rick & Morty" class="w-full h-14 object-cover opacity-90 group-hover:opacity-100" />
+           <div class="p-2 shrink-0">
              <p class="text-[10px] font-bold dark:text-white text-primary group-hover:text-blue-500 transition-colors">Rick & Morty</p>
              <p class="text-[9px] text-zinc-500 dark:text-zinc-400">React / API</p>
            </div>
         </a>
         <!-- TCG Arena Pokédex -->
-        <a href="https://tcg-arena-pokedex.vercel.app" target="_blank" class="rounded-xl overflow-hidden bg-zinc-50 dark:bg-tertiary ring-1 ring-primary/5 dark:ring-white/5 hover:scale-[1.02] transition-transform duration-300 group">
-          <img src="/images/pokedex.png" alt="Pokédex" class="w-full aspect-video object-cover opacity-90 group-hover:opacity-100" />
-          <div class="p-2">
+        <a href="https://tcg-arena-pokedex.vercel.app" target="_blank" class="rounded-xl overflow-hidden bg-zinc-50 dark:bg-tertiary ring-1 ring-primary/5 dark:ring-white/5 hover:scale-[1.02] hover:ring-2 hover:ring-indigo-400/50 transition-all duration-300 group flex flex-col">
+          <img src="/images/pokedex.png" alt="Pokédex" class="w-full h-14 object-cover opacity-90 group-hover:opacity-100" />
+          <div class="p-2 shrink-0">
             <p class="text-[10px] font-bold dark:text-white text-primary group-hover:text-blue-500 transition-colors">TCG Pokédex</p>
             <p class="text-[9px] text-zinc-500 dark:text-zinc-400">React / API</p>
           </div>
-       </a>
-       <!-- Ciudad Digital -->
-       <a href="https://ciudadno-gobierno-digital.vercel.app" target="_blank" class="rounded-xl overflow-hidden bg-zinc-50 dark:bg-tertiary ring-1 ring-primary/5 dark:ring-white/5 hover:scale-[1.02] transition-transform duration-300 group">
-        <img src="/images/gobierno.png" alt="Ciudad & Gobierno" class="w-full aspect-video object-cover opacity-90 group-hover:opacity-100" />
-        <div class="p-2">
-          <p class="text-[10px] font-bold dark:text-white text-primary group-hover:text-blue-500 transition-colors">Ciudad Digital</p>
-          <p class="text-[9px] text-zinc-500 dark:text-zinc-400">Digital Services</p>
+        </a>
+        <!-- Ciudad Digital -->
+        <div class="rounded-xl overflow-hidden bg-zinc-50 dark:bg-tertiary ring-1 ring-primary/5 dark:ring-white/5 hover:ring-2 hover:ring-indigo-400/50 transition-all duration-300 group flex flex-col relative">
+          <a href="https://ciudadno-gobierno-digital.vercel.app" target="_blank" class="flex flex-col group/link">
+            <img src="/images/gobierno.png" alt="Ciudad & Gobierno" class="w-full h-14 object-cover opacity-90 group-hover/link:opacity-100" />
+            <div class="p-2 shrink-0">
+              <p class="text-[10px] font-bold dark:text-white text-primary group-hover/link:text-blue-500 transition-colors">Ciudad Digital</p>
+              <p class="text-[9px] text-zinc-500 dark:text-zinc-400">Digital Services</p>
+            </div>
+          </a>
+          <!-- Badge APK absoluto - ahora seguro fuera del link principal -->
+          <div class="absolute top-1.5 right-1.5 z-20">
+            <a href="https://github.com/barockatr/ciudadano-movil" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[8px] font-bold bg-[#3DDC84] text-black ring-1 ring-black/20 hover:scale-105 transition-transform shadow-sm">
+              🤖 Android APK
+            </a>
+          </div>
         </div>
-     </a>
       </div>
     </div>
 
@@ -138,12 +151,24 @@
           <img src="https://img.icons8.com/color/48/css3.png" class="h-3.5 w-3.5" alt="CSS3" /> CSS3
         </span>
 
+        <span class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl text-[10px] font-medium bg-[#119EFF]/10 text-[#119EFF] ring-1 ring-[#119EFF]/30 transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(17,158,255,0.3)]">
+          <img src="https://cdn.simpleicons.org/capacitor/119EFF" class="h-3.5 w-3.5" alt="Capacitor" /> Capacitor
+        </span>
+
+        <span class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl text-[10px] font-medium bg-[#3DDC84]/10 text-[#3DDC84] ring-1 ring-[#3DDC84]/30 transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(61,220,132,0.3)]">
+          <img src="https://cdn.simpleicons.org/androidstudio/3DDC84" class="h-3.5 w-3.5" alt="Android Studio" /> Android
+        </span>
+
         <span class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl text-[10px] font-medium bg-zinc-800/20 text-zinc-100 ring-1 ring-zinc-500/30 transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
           <img src="https://cdn.simpleicons.org/nextdotjs/white" class="h-3.5 w-3.5" alt="Next.js" /> Next.js
         </span>
         
         <span class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl text-[10px] font-medium bg-green-950/20 text-green-300 ring-1 ring-green-500/30 transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)]">
           <img src="https://cdn.simpleicons.org/nodedotjs/339933" class="h-3.5 w-3.5" alt="Node.js" /> Node.js
+        </span>
+
+        <span class="flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl text-[10px] font-medium bg-[#443E38]/40 text-amber-200 ring-1 ring-amber-700/30 transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(180,140,80,0.3)]">
+          🐻 Zustand
         </span>
       </div>
     </div>
@@ -158,12 +183,17 @@
           ¿Quieres conocer más de mi experiencia?
         </h3>
         <p class="text-zinc-400 text-sm max-w-md">
-          Accede a mi trayectoria laboral completa y visualiza mi CV detallado en formato profesional.
+          Accede a mi trayectoria laboral completa — incluye <strong class="text-white">Demos Móviles</strong> y acceso directo a los <strong class="text-white">repositorios de mis apps Android</strong>.
         </p>
+        <div class="flex items-center justify-center md:justify-start gap-2 mt-2">
+          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-semibold bg-[#3DDC84]/20 text-[#5FFFAA] ring-1 ring-[#3DDC84]/50 drop-shadow-[0_0_4px_rgba(61,220,132,0.4)]">🤖 Android APK</span>
+          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-semibold bg-[#119EFF]/20 text-[#60C8FF] ring-1 ring-[#119EFF]/50 drop-shadow-[0_0_4px_rgba(17,158,255,0.4)]">⚡ Capacitor</span>
+          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-semibold bg-indigo-500/20 text-indigo-200 ring-1 ring-indigo-400/50 drop-shadow-[0_0_4px_rgba(129,140,248,0.4)]">📂 Repositorios</span>
+        </div>
       </div>
 
       <div class="relative z-10 mt-6 md:mt-0">
-        <a href="https://drive.google.com/file/d/1ZCHYUcFQDSNLhwKLLTdpVCvnpUXluPfT/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="animate-shimmer relative overflow-hidden inline-flex items-center gap-3 px-8 py-4 bg-white text-primary font-bold rounded-2xl hover:scale-105 transition-all shadow-lg hover:shadow-indigo-500/20 active:scale-95">
+        <a href="https://drive.google.com/file/d/1ZCHYUcFQDSNLhwKLLTdpVCvnpUXluPfT/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="animate-shimmer relative overflow-hidden inline-flex items-center gap-3 px-8 py-4 bg-white text-primary font-bold rounded-2xl hover:scale-105 transition-all shadow-lg hover:shadow-indigo-500/20 active:scale-95">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
           VISUALIZAR CV
         </a>
@@ -190,7 +220,13 @@
         "\"Primero resuelve el problema. Entonces, escribe el código.\" — John Johnson",
         "\"La función de un buen software es hacer que lo complejo parezca simple.\"",
         "\"Hazlo simple, hazlo memorable.\"",
-        "\"El mejor código es el que no existe.\""
+        "\"El mejor código es el que no existe.\"",
+        "\"First, solve the problem. Then, write the code.\"",
+        "\"Any fool can write code a computer understands. Good programmers write code humans understand.\" — M. Fowler",
+        "\"Make it work, make it right, make it fast.\" — Kent Beck",
+        "\"Code is like humor. When you have to explain it, it's bad.\" — Cory House",
+        "\"Clean code always looks like it was written by someone who cares.\"",
+        "\"The best error message is the one that never shows up.\""
     ];
 
     const quoteElement = document.getElementById('bento-quote');
@@ -215,6 +251,24 @@
     if (quoteElement) {
       setInterval(changeQuote, 6000);
     }
+
+    // ── Bento Card Entrance Animations (IntersectionObserver) ──
+    const bentoCards = document.querySelectorAll('.bento-grid-root > div');
+    bentoCards.forEach((card, i) => {
+      (card as HTMLElement).style.setProperty('--delay', `${i * 75}ms`);
+      card.classList.add('bento-card');
+    });
+
+    const bentoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('bento-visible');
+          bentoObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('.bento-card').forEach(el => bentoObserver.observe(el));
   </script>
 
   <style>
@@ -237,6 +291,19 @@
         transparent
       );
       animation: shimmer 2.5s infinite;
+    }
+
+    /* Bento card entrance animation */
+    .bento-card {
+      opacity: 0;
+      transform: translateY(18px);
+      transition:
+        opacity  0.55s ease var(--delay, 0ms),
+        transform 0.55s ease var(--delay, 0ms);
+    }
+    .bento-card.bento-visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </section>

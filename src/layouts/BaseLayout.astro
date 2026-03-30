@@ -2,12 +2,48 @@
 import BaseHead from "../components/BaseHead.astro";
 ---
 
-<html lang="en">
+<html lang="es">
   <head>
     <BaseHead />
   </head>
 
-  <body class="dark:bg-primary bg-zinc-200 ">
+  <body class="dark:bg-primary bg-zinc-200">
+    <!-- Custom cursor elements -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
     <slot />
+
+    <script>
+      // ── Custom Cursor ──────────────────────────────────────────
+      const dot  = document.getElementById('cursor-dot');
+      const ring = document.getElementById('cursor-ring');
+      let ringX = 0, ringY = 0, mouseX = 0, mouseY = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (dot) {
+          dot.style.left = `${mouseX}px`;
+          dot.style.top  = `${mouseY}px`;
+        }
+      });
+
+      (function animateRing() {
+        ringX += (mouseX - ringX) * 0.12;
+        ringY += (mouseY - ringY) * 0.12;
+        if (ring) {
+          ring.style.left = `${ringX}px`;
+          ring.style.top  = `${ringY}px`;
+        }
+        requestAnimationFrame(animateRing);
+      })();
+
+      // Expand ring on interactive elements
+      document.querySelectorAll('a, button, input, [role="button"]').forEach(el => {
+        el.addEventListener('mouseenter', () => ring?.classList.add('is-hovering'));
+        el.addEventListener('mouseleave', () => ring?.classList.remove('is-hovering'));
+      });
+    </script>
   </body>
 </html>
